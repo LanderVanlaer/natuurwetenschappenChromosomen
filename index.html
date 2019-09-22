@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chromosomen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="conatainer">
+        <div id="kansberekening">
+            <div id="jongens">
+                <h1>Aantal jongens: <input id="aantalJongens" type="number" min="0" value="1"></input></h1>
+            </div>
+            <div id="meisjes">
+                <h1>Aantal meisjes: <input id="aantalMeisjes" type="number" min="0" value="0"></input></h1>
+            </div>
+            <div id="output">
+                <p id="textPercentChance">Er is <span class="outputPercentage">0%</span> kans dat u deze samenstelling
+                    van kinderen krijgt.</p>
+                <h1 id="outputTextPercentage" class="outputPercentage">0%</h1>
+                <h1 id="outputTextFraction">
+                    <sup id="deeltal">1</sup>
+                    &frasl;
+                    <sub id="deler">2</sub>
+                </h1>
+            </div>
+        </div>
+        <div id="hr">
+            <hr>
+        </div>
+        <div id="automaticTest">
+            <p id="uitlegSnelheid">Pas hier de snelheid aan in milliseconden</p>
+            <input id="time" type="number" min="100" value="1000">
+            <a id="plusOneButton" class="button">Een Toevoegen</a>
+            <a id="runButton" class="button">Start</a>
+            <p id="precentageBoys">0%</p>
+            <p id="precentageGirls">0%</p>
+            <p id="nameBoys">Jongens</p>
+            <p id="nameGirls">Meisjes</p>
+            <div id="automaticTestJongens" class="elements"></div>
+            <div id="automaticTestMeisjes" class="elements"></div>
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

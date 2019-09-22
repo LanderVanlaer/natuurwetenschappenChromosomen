@@ -1,0 +1,219 @@
+@media only screen and (max-width: 768px) {
+    #kansberekening {
+        grid-template-columns: 45% 10% 45%;
+        grid-template-areas:
+            "jongens jongens jongens"
+            "meisjes meisjes meisjes"
+            "berekeningen berekeningen berekeningen";
+    }
+
+    #plusOneButton {
+        height: 64px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #kansberekening {
+        grid-template-columns: 45% 10% 45%;
+        grid-template-areas:
+            "jongens . berekeningen"
+            ". . berekeningen"
+            "meisjes . berekeningen";
+    }
+
+    #plusOneButton {
+        height: 41px;
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    color: black;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 320px;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #c6c6c6;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+
+
+
+/*MY OWN WORK*/
+
+
+#automaticTestMeisjes,
+#automaticTestJongens {
+    border: 5px solid grey;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.7em 1.4em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.15em;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #FFFFFF;
+    background-color: #3369ff;
+    box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
+    text-align: center;
+    position: relative;
+}
+
+
+#conatainer {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: auto 100px 100px auto;
+    grid-template-areas:
+        ". kansberekening ."
+        ". . ."
+        "hr hr hr"
+        ". automaticTest .";
+}
+
+#kansberekening {
+    grid-area: kansberekening;
+    grid-template-rows: auto;
+    display: grid;
+    /*
+        grid-template-columns: 45% 10% 45%;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "jongens . berekeningen"
+            ". . berekeningen"
+            "meisjes . berekeningen";
+    */
+}
+
+#jongens {
+    grid-area: jongens;
+}
+
+#meisjes {
+    grid-area: meisjes;
+}
+
+#output {
+    grid-area: berekeningen;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "text"
+        "outputTextPercentage"
+        "outputTextFraction";
+}
+
+#textPercentChance {
+    grid-area: text;
+    text-align: left;
+}
+
+#outputTextPercentage {
+    grid-area: outputTextPercentage;
+    text-align: center;
+}
+
+#outputTextFraction {
+    grid-area: outputTextFraction;
+    text-align: center;
+}
+
+#hr {
+    grid-area: hr;
+    height: 250px;
+}
+
+hr {
+    text-align: center;
+}
+
+#automaticTest {
+    grid-area: automaticTest;
+    display: grid;
+    grid-template-columns: 45% 10% 45%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "p . plusOneButton"
+        "tijd . runButton"
+        "precentageBoys . precentageGirls"
+        "nameBoys . nameGirls"
+        "autoBoys . autoGirls"
+        "autoBoys . autoGirls";
+}
+
+#uitlegSnelheid {
+    grid-area: p;
+    font-size: 1.2em;
+}
+
+#time {
+    grid-area: tijd;
+}
+
+#plusOneButton {
+    grid-area: plusOneButton;
+    text-align: center;
+}
+
+#runButton {
+    grid-area: runButton;
+}
+
+
+#precentageBoys {
+    grid-area: precentageBoys;
+    text-align: center;
+    font-size: 2em;
+}
+
+#precentageGirls {
+    grid-area: precentageGirls;
+    text-align: center;
+    font-size: 2em;
+}
+
+#nameBoys {
+    grid-area: nameBoys;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+#nameGirls {
+    grid-area: nameGirls;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+#automaticTestJongens {
+    grid-area: autoBoys;
+}
+
+#automaticTestMeisjes {
+    grid-area: autoGirls;
+}
+
+.elements {
+    min-height: 100px;
+}
+
+.elements>* {
+    text-align: center;
+    font-size: 1.2em;
+}
